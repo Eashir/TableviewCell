@@ -3,9 +3,14 @@
 The gist of the stackview setup is shown in the following image along with the UIImages + UILabels.
 &nbsp;
 
-We'll have a total of 10 stackviews!
+We'll have a total of 9 stackviews!
 
 <img width="575" alt="Screen Shot 2024-01-11 at 10 49 04 AM" src="https://github.com/Eashir/TableviewCell/assets/20934684/7e01358c-5c7f-492f-9fb3-426f949491dc">
+
+Start with the standard viewcontroller. Manually add a tableview to it. Manually add a tableviewcell to the tableview as well. 
+Heres what our CustomTableViewController will look like.
+
+Note that its a ViewController with tableview methods!
 
 ```
 import UIKit
@@ -35,5 +40,24 @@ extension CustomTableViewController: UITableViewDataSource, UITableViewDelegate 
 ```
 
 
+```
+import UIKit
 
+class PersonTableViewCell: UITableViewCell {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10))
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+    
+}
+```
 
