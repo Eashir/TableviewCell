@@ -20,7 +20,6 @@ class CustomTableViewController: UIViewController {
         self.tableView.dataSource = self
     }    
 }
-
 extension CustomTableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
