@@ -64,8 +64,7 @@ class PersonTableViewCell: UITableViewCell {
     
 }
 ```
-<br>
-<br>
+<br><br><br><br><br>
 
 You can also set the storyboard cellheight to 150 for now  
 *Remember to set the cellreuseidentifier in the storyboard cell we created!*
