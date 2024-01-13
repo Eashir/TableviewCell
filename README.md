@@ -68,6 +68,7 @@ class PersonTableViewCell: UITableViewCell {
 <br>
 
 You can also set the storyboard cellheight to 150 for now  
+*Remember to set the cellreuseidentifier in the storyboard cell we created!*
 <img width="258" alt="Screen Shot 2024-01-12 at 9 22 24 PM" src="https://github.com/Eashir/TableviewCell/assets/20934684/00300256-28ee-4f2d-b9c9-68b7c01a0669">
 
 
