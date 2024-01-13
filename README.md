@@ -1,5 +1,6 @@
 ### Custom TableviewCell
-
+<br>
+<br>
 The gist of the stackview setup is shown in the following image along with the UIImages + UILabels.
 <br>
 We'll have a total of 9 stackviews!
