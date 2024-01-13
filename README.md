@@ -14,7 +14,7 @@ We'll have a total of 9 stackviews!
 Start with the standard viewcontroller. Manually add a tableview to it. Manually add a tableviewcell to the tableview as well. 
 Heres what our CustomTableViewController will look like.
 
-Note that its a ViewController with tableview methods!
+**Note** that its a ViewController with tableview methods!
 
 ```
 import UIKit
@@ -42,7 +42,7 @@ extension CustomTableViewController: UITableViewDataSource, UITableViewDelegate 
     }   
 }
 ```
-
+CustomTableViewCell setup
 
 ```
 import UIKit
