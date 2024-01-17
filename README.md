@@ -17,45 +17,61 @@ Heres what our CustomTableViewController will look like.
 **Note** that its a ViewController with tableview methods!
 
 ```
+
 import UIKit
 
-class CustomTableViewController: UIViewController {  
+class CustomTableViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
+    
     var persons: [Person] = []
-    var cellIdentifier = "PersonCellReuseIdentifier"    
+    var cellIdentifier = "PersonCellReuseIdentifier"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-    }    
+        
+    }
+    
 }
+
+// MARK: - UITableViewDelegate + Datasource
+
 extension CustomTableViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! PersonTableViewCell
         return cell
-    } 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }   
+    }
+
+    
 }
+
 ```
     CustomTableViewCell setup
 
 ```
+
+import Foundation
 import UIKit
 
 class PersonTableViewCell: UITableViewCell {
+    @IBOutlet weak var ProfileImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10))
+    override func layoutSubviews()  {
+        
+        self.ProfileImageView.layer.cornerRadius = self.ProfileImageView.bounds.height/2
+        self.ProfileImageView.clipsToBounds = true
     }
     
     override func prepareForReuse() {
@@ -63,6 +79,7 @@ class PersonTableViewCell: UITableViewCell {
     }
     
 }
+
 ```
 <br><br><br><br><br>
 
